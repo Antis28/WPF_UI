@@ -24,5 +24,22 @@ namespace Lesson1
         {
             InitializeComponent();
         }
+
+        private void button_Click( object sender, RoutedEventArgs e )
+        {
+            string login = "Antis";
+            string pass = "149";
+
+            if( loginField.Text == login && passField.Text == pass )
+            {
+                MessageBox.Show( "Поздравляяю логин и пароль верен!!!" );
+            } else if( loginField.Text == login && passField.Text != pass )
+            {
+                MessageBox.Show( "Возможно не верен пароль, попробуйте еще раз." );
+            } else
+            {
+                MessageBox.Show( "Кажется я вас не знаю, вы точно правильно ввели логин?" );
+            }
+        }
     }
 }
